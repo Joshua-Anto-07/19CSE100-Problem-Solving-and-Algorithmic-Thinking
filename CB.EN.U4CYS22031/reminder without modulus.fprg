@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="r_ramaguru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:16:05 AM"/>
+        <attribute name="created" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzEwOjA0OjIwIEFNOzMxMjg="/>
+        <attribute name="edited" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzEwOjE2OjA1IEFNOzI7MzI0Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Inputing the divider and divident"/>
+            <output expression="&quot;input the divident&quot;" newline="True"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <output expression="&quot;input the divider&quot;" newline="True"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <input variable="b"/>
+            <comment text="calculating reminder without modulus operator"/>
+            <while expression="a&gt;b">
+                <assign variable="a" expression="a-b"/>
+            </while>
+            <output expression="&quot;The reminder is &quot;&amp;a" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

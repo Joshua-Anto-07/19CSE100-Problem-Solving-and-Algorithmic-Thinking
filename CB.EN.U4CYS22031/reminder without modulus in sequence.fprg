@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="r_ramaguru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:31:37 AM"/>
+        <attribute name="created" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzEwOjA0OjIwIEFNOzMxMjg="/>
+        <attribute name="edited" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzEwOjMxOjM3IEFNOzQ7MzI0Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="inputing divident"/>
+            <output expression="&quot;input the divident&quot;" newline="True"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <comment text="inputing divisor"/>
+            <output expression="&quot;input the divisor&quot;" newline="True"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <input variable="b"/>
+            <comment text="calculating reminder  without modulus operator"/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <assign variable="c" expression="a/b"/>
+            <assign variable="d" expression="a-b*c"/>
+            <comment text="outputing the reminder"/>
+            <output expression="&quot;the reminder is &quot;&amp;d" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

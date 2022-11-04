@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="r_ramaguru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:01:18 AM"/>
+        <attribute name="created" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzA5OjUxOjM1IEFNOzMxNDQ="/>
+        <attribute name="edited" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzEwOjAxOjE4IEFNOzE7MzI0MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Inputing the 2 numbers"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter number 1&quot;" newline="True"/>
+            <input variable="a"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter number 2&quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="swapping values "/>
+            <assign variable="a" expression="a+b"/>
+            <assign variable="b" expression="a-b"/>
+            <assign variable="a" expression="a-b"/>
+            <comment text="outputing the numbers after value has swapped&#13;&#10;"/>
+            <output expression="&quot;the first number after the swap is &quot;&amp;a" newline="True"/>
+            <output expression="&quot;the second number after the swap is &quot;&amp;b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

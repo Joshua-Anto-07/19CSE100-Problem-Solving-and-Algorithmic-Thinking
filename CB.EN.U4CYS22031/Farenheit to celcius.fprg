@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="r_ramaguru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:34:44 AM"/>
+        <attribute name="created" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzA5OjI0OjIzIEFNOzMxNDE="/>
+        <attribute name="edited" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzA5OjI0OjI4IEFNOzE7cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzA5OjA2OjQ4IEFNO2NlbGNpdXMgdG8gZmFyZW5oZWl0LmZwcmc7ODk4Mg=="/>
+        <attribute name="edited" value="cl9yYW1hZ3VydTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTA0OzEwOjM0OjQ0IEFNOzM7MzI0Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Inputting the value in faranheit"/>
+            <declare name="farenheit" type="Real" array="False" size=""/>
+            <output expression="&quot;ENter value in farenheit&quot;" newline="True"/>
+            <input variable="farenheit"/>
+            <comment text="declaring variable to store value in C"/>
+            <declare name="celcius" type="Real" array="False" size=""/>
+            <comment text="calculating value in celcius"/>
+            <assign variable="celcius" expression="(farenheit-32)*5/9"/>
+            <comment text="outputing the value in C"/>
+            <output expression="&quot;the value in ceclius is &quot;&amp;celcius" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
