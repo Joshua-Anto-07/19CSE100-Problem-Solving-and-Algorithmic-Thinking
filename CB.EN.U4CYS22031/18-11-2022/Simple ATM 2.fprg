@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22031"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:12:25 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzA5OjUxOjA1IEFNOzMzMjE="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzA5OjUxOjA4IEFNOzE7Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzA4OjU4OjA5IEFNO1NpbXBsZSBBVE0gMi5mcHJnOzgzMTY="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzA5OjU2OjE1IEFNOzE7Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzA4OjU4OjA5IEFNO1NpbXBsZSBBVE0uZnByZzs4MjM3"/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzEwOjEyOjI1IEFNOzU7MzQyNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring all the variables required"/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <declare name="AccountNo" type="Integer" array="False" size=""/>
+            <declare name="BankBalance" type="Integer" array="False" size=""/>
+            <declare name="TAC" type="Integer" array="False" size=""/>
+            <declare name="TPIN" type="Integer" array="False" size=""/>
+            <declare name="PIN" type="Integer" array="False" size=""/>
+            <declare name="WithAMT" type="Integer" array="False" size=""/>
+            <declare name="Operation" type="Integer" array="False" size=""/>
+            <comment text="assigning values to specific variables"/>
+            <assign variable="BankBalance" expression="20000"/>
+            <assign variable="PIN" expression="6789"/>
+            <assign variable="Name" expression="&quot;Singh&quot;"/>
+            <assign variable="AccountNo" expression="2345678"/>
+            <comment text="Asking user for the account number"/>
+            <output expression="&quot;Enter your account number&quot;" newline="True"/>
+            <input variable="TAC"/>
+            <comment text="checking wether the account number is coorect"/>
+            <if expression="TAC=AccountNO">
+                <then>
+                    <output expression="&quot;Welcome &quot;&amp;Name" newline="True"/>
+                    <output expression="&quot;WHich operation will you like to perform: &quot;" newline="True"/>
+                    <output expression="&quot;1. Withdraw&quot;" newline="True"/>
+                    <output expression="&quot;2.Deposit&quot;" newline="True"/>
+                    <output expression="&quot;3. Check account balance&quot;" newline="True"/>
+                    <output expression="&quot;4. CHange pin number&quot;" newline="True"/>
+                    <input variable="Operation"/>
+                    <comment text="CHecking wich operation to perform"/>
+                    <if expression="Operation==1">
+                        <then>
+                            <output expression="&quot;Enter your 4-digit PIN&quot;" newline="True"/>
+                            <input variable="TPIN"/>
+                            <if expression="TPIN==PIN">
+                                <then>
+                                    <comment text="Displaying bank balance and withdrawing money"/>
+                                    <output expression="&quot;Your bank balance is: &quot;&amp;BankBalance&amp;&quot; How much would you like to withdraw &quot;" newline="True"/>
+                                    <input variable="WithAMT"/>
+                                    <comment text="Check if user enters the minimum withdrawing amount"/>
+                                    <if expression="WithAMT&gt;499">
+                                        <then>
+                                            <comment text="Check if amount to be withdrawn is lesser than bank balance"/>
+                                            <if expression="WithAMT&gt;20000">
+                                                <then>
+                                                    <output expression="&quot; Your account only holds &quot;&amp;BankBalance&amp;&quot; Please Enter a amount Lesser than Your bank balance&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="BankBalance" expression="BankBalance-WithAMT"/>
+                                                    <output expression="&quot;Your remaning balance is: &quot;&amp;BankBalance" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;The minimum cash to be withdrawn is 500&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <comment text="If wronmg pin is entered"/>
+                                    <output expression="&quot;Your PIN was incorrect&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="Operation==2">
+                                <then>
+                                    <comment text="Depositing amount"/>
+                                    <output expression="&quot;Please enter the amount to be deposited&quot;" newline="True"/>
+                                    <declare name="DEPAMT" type="Integer" array="False" size=""/>
+                                    <input variable="DEPAMT"/>
+                                    <assign variable="BankBalance" expression="BankBalance+DEPAMT"/>
+                                    <output expression="&quot;Your New Bank balance is: &quot;&amp;BankBalance" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="Operation==3">
+                                        <then>
+                                            <comment text="checking bank balance"/>
+                                            <output expression="&quot;Your Bank Balance is: &quot;&amp;BankBalance" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="Operation==4">
+                                                <then>
+                                                    <comment text="changing pin number"/>
+                                                    <output expression="&quot;Enter your 4-digit PIN&quot;" newline="True"/>
+                                                    <input variable="TPIN"/>
+                                                    <comment text="VErifying old pin"/>
+                                                    <if expression="TPIN==PIN">
+                                                        <then>
+                                                            <output expression="&quot;Please enetr your new pin&quot;" newline="True"/>
+                                                            <input variable="PIN"/>
+                                                            <output expression="&quot;Your New pin is: &quot;&amp;PIN" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Your PIN was incorrect&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <comment text="IF none of the operation in enetered"/>
+                                                    <output expression="&quot;please eneter a valid opertaion&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Enter valid account no.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

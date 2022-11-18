@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22031"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:26:31 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzA4OjU4OjA5IEFNOzMzMzE="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzEwOjIwOjUzIEFNOzE7Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzA5OjUxOjA1IEFNO1NpbXBsZSBBVE0gMi5mcHJnOzgyOTQ="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTExLTE4OzEwOjI2OjMxIEFNOzY7MzQyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring all the variables required"/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <declare name="AccountNo" type="Integer" array="False" size=""/>
+            <declare name="BankBalance" type="Integer" array="False" size=""/>
+            <declare name="TAC" type="Integer" array="False" size=""/>
+            <declare name="TPIN" type="Integer" array="False" size=""/>
+            <declare name="PIN" type="Integer" array="False" size=""/>
+            <declare name="WithAMT" type="Integer" array="False" size=""/>
+            <comment text="assigning values to specific variables"/>
+            <assign variable="BankBalance" expression="20000"/>
+            <assign variable="PIN" expression="6789"/>
+            <assign variable="Name" expression="&quot;Singh&quot;"/>
+            <assign variable="AccountNo" expression="2345678"/>
+            <comment text="Asking user for the account number"/>
+            <output expression="&quot;Enter your account number&quot;" newline="True"/>
+            <input variable="TAC"/>
+            <comment text="checking wether the account number is coorect"/>
+            <if expression="TAC==AccountNO">
+                <then>
+                    <comment text="If correct, displays name and asks for pin"/>
+                    <output expression="&quot;Welcome &quot;&amp;Name" newline="True"/>
+                    <output expression="&quot;Enter your 4-digit PIN&quot;" newline="True"/>
+                    <input variable="TPIN"/>
+                    <if expression="TPIN==PIN">
+                        <then>
+                            <comment text="Displaying bank balance and withdrawing money"/>
+                            <output expression="&quot;Your bank balance is: &quot;&amp;BankBalance&amp;&quot; How much would you like to withdraw &quot;" newline="True"/>
+                            <input variable="WithAMT"/>
+                            <comment text="Check if user enters the minimum withdrawing amount"/>
+                            <if expression="WithAMT&gt;499">
+                                <then>
+                                    <comment text="Check if amount to be withdrawn is lesser than bank balance"/>
+                                    <if expression="WithAMT&gt;20000">
+                                        <then>
+                                            <output expression="&quot; Your account only holds &quot;&amp;BankBalance&amp;&quot; Please Enter a amount Lesser than Your bank balance&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="BankBalance" expression="BankBalance-WithAMT"/>
+                                            <output expression="&quot;Your remaning balance is: &quot;&amp;BankBalance" newline="True"/>
+                                            <if expression="BankBalance&lt;500">
+                                                <then>
+                                                    <output expression="&quot;PLease maintain a minimum balance of 500&quot;" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;The minimum cash to be withdrawn is 500&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <comment text="If wronmg pin is entered"/>
+                            <output expression="&quot;Your PIN was incorrect&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="If wrong account number is entered"/>
+                    <output expression="&quot;Please eneter a valid account number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
