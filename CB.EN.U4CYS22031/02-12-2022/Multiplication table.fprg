@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22031"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:47:08 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTEyLTAyOzA5OjEwOjU2IEFNOzMzMTY="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTEyLTAyOzA5OjQ3OjA4IEFNOzU7MzQzNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declare two variables for two loops"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <comment text="first loop for number 1"/>
+            <for variable="a" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;&quot;" newline="True"/>
+                <output expression="&quot;Multiplication table of &quot;&amp;a&amp;&quot; is: &quot;" newline="True"/>
+                <comment text="second loop for number 2"/>
+                <for variable="b" start="1" end="10" direction="inc" step="1">
+                    <comment text="output in form as a table"/>
+                    <output expression="a&amp;&quot;*&quot;&amp;b&amp;&quot;=&quot;&amp;a*b&amp;&quot;     &quot;" newline="False"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

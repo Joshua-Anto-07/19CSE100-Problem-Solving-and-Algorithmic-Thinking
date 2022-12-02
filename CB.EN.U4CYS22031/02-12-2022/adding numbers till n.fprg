@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22031"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:27:42 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTEyLTAyOzA5OjA1OjExIEFNOzMzMTE="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTEyLTAyOzA5OjI3OjQyIEFNOzU7MzQzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="inputing the value of n to calculate the sum of n numbers"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;input a vaLUE for n&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="declaring variable i for loop "/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="declare variable sum"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <comment text="loop and add the n numbers"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="sum" expression="sum+i"/>
+            </for>
+            <comment text="ouptut the sum of n numbers"/>
+            <output expression="&quot;sum of n numbers is: &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
