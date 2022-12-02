@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22031"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:21:21 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTEyLTAyOzA5OjA1OjExIEFNOzMzMTE="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAzMTsyMDIyMjNNQVlDMDA2ODsyMDIyLTEyLTAyOzEwOjIxOjIxIEFNOzExOzM0NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="inputing the value of n to calculate the sum of n numbers"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;input a vaLUE for n&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="declaring first second and third term"/>
+            <declare name="first" type="Integer" array="False" size=""/>
+            <assign variable="first" expression="0"/>
+            <declare name="second" type="Integer" array="False" size=""/>
+            <assign variable="second" expression="1"/>
+            <declare name="third" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;The fibonacci series till the number n is: &quot;" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <comment text="adding swapping numbers to follow fibonacci order"/>
+                <assign variable="third" expression="first+second"/>
+                <assign variable="first" expression="second"/>
+                <assign variable="second" expression="third"/>
+                <output expression="third" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
