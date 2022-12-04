@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Joshua"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-04 09:27:46 PM"/>
+        <attribute name="created" value="Sm9zaHVhO0pPU0g7MjAyMi0xMi0wNDswOTowOTozNSBQTTsyMjA5"/>
+        <attribute name="edited" value="Sm9zaHVhO0pPU0g7MjAyMi0xMi0wNDswOToyNzo0NiBQTTsxOzIzMTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="input till which number&#13;&#10;"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;input till which number&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="u" type="Integer" array="False" size=""/>
+            <output expression="&quot;the prime numbers till n are: &quot;" newline="True"/>
+            <comment text="first loop for number from 1 to n"/>
+            <for variable="u" start="1" end="n" direction="inc" step="1">
+                <declare name="i" type="Integer" array="False" size=""/>
+                <declare name="x" type="Boolean" array="False" size=""/>
+                <assign variable="x" expression="True"/>
+                <comment text="second loop for numbers from 2 to the number we check"/>
+                <for variable="i" start="2" end="u-1" direction="inc" step="1">
+                    <comment text="mod function to find if prime number"/>
+                    <if expression="(u%i)==0">
+                        <then>
+                            <assign variable="x" expression="False"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="x=True">
+                    <then>
+                        <output expression="u" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
